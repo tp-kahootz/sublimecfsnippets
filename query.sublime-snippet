@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+local.sql = "
+	${1}
+";
+local.params = {
+	"id":{value="", cfsqltype="cf_sql_integer"}
+};
+local.vals = queryExecute( local.sql, local.params, { datasource=request.dsn, result=local.result [, dbtype="query"] [, returntype="struct", columnkey="id"] } );
+/* local.result.generatedKey  */
+]]></content>
+	<tabTrigger>query</tabTrigger>
+	<scope>source.cfml.script</scope>
+	<description>CFScript query</description>
+</snippet>
